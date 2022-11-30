@@ -8,11 +8,6 @@
 {%endfor%}
 
 
-{% comment %} {% if isAffiliate%}
-  <a href={{ link }}><h4>SEE ON AMAZON</h4></a>
-{% endif %}  {% endcomment %}
-
-
 
 <div class="product-template__container page-width"
   id="ProductSection-{{ section.id }}"
@@ -265,7 +260,7 @@
               </div>
             </div>
             {%else%}
-          <a data-add-to-cart class="btn product-form__cart-submit" type="button" href={{link}} target=”_blank”>SEE ON AMAZON</a>
+          <a data-add-to-cart class="btn product-form__cart-submit" type="button" href={{link}} target=”_blank”>{{"customizations.affiliate_page.amazon_btn" | t}}</a>
 {%endunless%}
             
           {% endform %}
