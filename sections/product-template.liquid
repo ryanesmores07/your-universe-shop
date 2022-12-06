@@ -301,9 +301,41 @@
         >
         </div>
 
+        
+
         <div class="product-single__description rte">
-          {{ product.description }}
+
+          <div class="container">
+            <div class="selector">
+              <div class="tab tab-active">{{"customizations.product_details_tab.description" | t}}</div>
+               {% unless product.metafields.description.details == blank%}
+              <div class="tab">{{"customizations.product_details_tab.details" | t}}</div>
+              {%endunless%}
+              <div class="tab">{{"customizations.product_details_tab.shipping" | t}}</div>
+            </div>
+            <div class="content">
+              <div id="Description" class="content-body show-active">
+                {{product.description}}
+              </div>
+
+              {% unless product.metafields.description.details == blank%}
+              <div id="Details" class="content-body">
+                {{product.metafields.description.details}}
+              </div>
+              {%endunless%}
+              
+              <div id="Shipping" class="content-body">
+                {{"customizations.product_details_tab.shipping_sentence" | t}}
+              </div>
+            </div>
+          </div>
+
+          
+          
+          
         </div>
+
+        
 
         {% if section.settings.show_share_buttons %}
           {% include 'social-sharing', share_title: product.title, share_permalink: product.url, share_image: product.featured_media %}
