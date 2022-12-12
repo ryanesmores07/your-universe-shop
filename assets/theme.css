@@ -9216,3 +9216,31 @@ hr {
     opacity: 1;
   }
 }
+
+/* About Styling */
+.container-about {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+}
+.container-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.image-about {
+  width: 50%;
+}
+
+.text-container {
+  padding-inline: 2rem;
+  text-align: left;
+}
+.text-container h3 {
+  margin-bottom: 1.5rem;
+}
+.text-container p {
+  width: 90%;
+}

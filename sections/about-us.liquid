@@ -1,0 +1,119 @@
+      <div class="container-about">
+  
+        <div class="container-item">
+          {{ section.settings.image_1 | img_url: '600x' | img_tag | replace: '<img', '<img class="image-about" '}}
+          <div class="text-container">
+            <h3>Image with text</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia sem in nulla venenatis, pharetra elementum massa sagittis. In aliquet sapien augue, in pretium ex accumsan sed. Mauris nec convallis mi, ut dapibus enim. Sed iaculis metus a luctus hendrerit. Nam aliquet consequat justo, eu ornare libero accumsan sed. 
+            </p>
+          </div>
+        </div>
+        <div class="container-item">
+          <div class="text-container">
+            <h3>Image with text</h3>
+            <p>
+             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia sem in nulla venenatis, pharetra elementum massa sagittis. In aliquet sapien augue, in pretium ex accumsan sed. Mauris nec convallis mi, ut dapibus enim. Sed iaculis metus a luctus hendrerit. Nam aliquet consequat justo, eu ornare libero accumsan sed. 
+            </p>
+          </div>
+          {{ section.settings.image_2 | img_url: '600x' | img_tag | replace: '<img', '<img class="image-about" '}}
+        </div>
+
+        <div class="container-item">
+           {{ section.settings.image_3 | img_url: '600x' | img_tag | replace: '<img', '<img class="image-about" '}}
+          <div class="text-container">
+            <h3>Image with text</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia sem in nulla venenatis, pharetra elementum massa sagittis. In aliquet sapien augue, in pretium ex accumsan sed. Mauris nec convallis mi, ut dapibus enim. Sed iaculis metus a luctus hendrerit. Nam aliquet consequat justo, eu ornare libero accumsan sed. 
+            </p>
+          </div>
+        </div>
+
+        <div class="container-item">
+          <div class="text-container">
+            <h3>Image with text</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia sem in nulla venenatis, pharetra elementum massa sagittis. In aliquet sapien augue, in pretium ex accumsan sed. Mauris nec convallis mi, ut dapibus enim. Sed iaculis metus a luctus hendrerit. Nam aliquet consequat justo, eu ornare libero accumsan sed. 
+            </p>
+          </div>
+           {{ section.settings.image_4 | img_url: '600x' | img_tag | replace: '<img', '<img class="image-about" '}}
+          
+        </div>
+
+      </div>
+
+{% schema %}
+  {
+  "name": "Add Image",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Image"    
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Image"    
+    },
+    {
+      "type": "image_picker",
+      "id": "image_3",
+      "label": "Image"    
+    },
+    {
+      "type": "image_picker",
+      "id": "image_4",
+      "label": "Image"    
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Headline/Paragraph",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Title",
+          "id": "title_1"
+        },
+        {
+          "type": "text",
+          "label": "Paragraph",
+          "id": "paragraph_1"
+        },
+        {
+          "type": "text",
+          "label": "Title",
+          "id": "title_2"
+        },
+        {
+          "type": "text",
+          "label": "Paragraph",
+          "id": "paragraph_2"
+        },
+        {
+          "type": "text",
+          "label": "Title",
+          "id": "title_3"
+        },
+        {
+          "type": "text",
+          "label": "Paragraph",
+          "id": "paragraph_3"
+        },
+        {
+          "type": "text",
+          "label": "Title",
+          "id": "title_4"
+        },
+        {
+          "type": "text",
+          "label": "Paragraph",
+          "id": "paragraph_4"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
